@@ -2,14 +2,28 @@
 <html lang="en">
 
 <head>
-    <title>Test form</title>
+    <title>Document</title>
 </head>
 
 <body>
-    <form onsubmit="return doSomething();" class="my-form">
-        <input type="submit" value="Submit" />
-    </form>
-    <script src="script.js"></script>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <form id="form">
+            <label for="first-operand">First Operand</label>
+            <input type="text" id="first-operand" name="first-operand" class="operand">
+            <select name="operator" id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="/">&divide</option>
+                <option value="*">&times</option>
+             </select>
+            <label for="second-operand">Second Operand</label>
+            <input type="text" id="second-operand" name="second-operand" class="operand">
+            <input type="submit" value="Submit">
+        </form>
+        <h1 id="output"></h1>
+    </div>
 </body>
+<script src="script.js"></script>
 
 </html>
