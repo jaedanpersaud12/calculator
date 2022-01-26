@@ -3,6 +3,7 @@
 
 <head>
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -11,19 +12,37 @@
         <form id="form">
             <label for="first-operand">First Operand</label>
             <input type="text" id="first-operand" name="first-operand" class="operand">
-            <select name="operator" id="operator">
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="/">&divide</option>
-                <option value="*">&times</option>
-             </select>
+            <div>
+                <div>
+                    <input type="radio" value="+" name="operator" id="plus">
+                    <label for="plus">+</label>
+                </div>
+                <div>
+                    <input type="radio" value="-" name="operator" id="minus">
+                    <label for="minus">-</label>
+                </div>
+                <div>
+                    <input type="radio" value="/" name="operator" id="divide">
+                    <label for="divide">&divide</label>
+                </div>
+                <div>
+                    <input type="radio" value="*" name="operator" id="times">
+                    <label for="times">&times</label>
+                </div>
+            </div>
             <label for="second-operand">Second Operand</label>
             <input type="text" id="second-operand" name="second-operand" class="operand">
-            <input type="submit" value="Submit">
+            <div>
+
+                <input type="submit" value="Submit">
+            </div>
         </form>
         <h1 id="output"></h1>
+        <h2 id="last-calc"></h2>
+
+
     </div>
 </body>
-<script src="script.js"></script>
+<script src="script.js" charset="utf-8"></script>
 
 </html>

@@ -6,19 +6,15 @@
 // radio button
 
 const submit = document.querySelector('#form')
-const operands = document.getElementsByClassName('operands')
-
 const firstOperand = document.querySelector('#first-operand')
 const secondOperand = document.querySelector('#second-operand')
-const operator = document.querySelector('#operator')
 const output = document.querySelector('#output')
+const lastCalc = document.querySelector('#last-calc')
 
 submit.addEventListener('submit', e => {
     e.preventDefault()
-    for (let i = 0; i < operands.length; i++) {
-        console.log(operands[i]).value;
-    }
-    //prevents the default action of submitting the form
+        //prevents the default action of submitting the form
+    const operator = document.querySelector('input[name="operator"]:checked')
     let one = parseInt(firstOperand.value)
     let two = parseInt(secondOperand.value)
         //creates two variables to hold the value of both operands
@@ -42,18 +38,22 @@ submit.addEventListener('submit', e => {
             case "+":
                 let plusOperation = one + two
                 output.textContent = plusOperation
+                lastCalc.textContent = `${one} + ${two}`
                 break;
             case "-":
                 let minusOperation = one - two
                 output.textContent = minusOperation
+                lastCalc.textContent = `${one} - ${two}`
                 break;
             case "/":
                 let divideOperation = one / two
                 output.textContent = divideOperation
+                lastCalc.textContent = `${one} / ${two}`
                 break;
             case "*":
                 let timesOperation = one * two
                 output.textContent = timesOperation
+                lastCalc.textContent = `${one} * ${two}`
                 break;
         }
         firstOperand.value = ''
