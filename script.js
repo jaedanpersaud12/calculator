@@ -36,23 +36,20 @@ submit.addEventListener('submit', e => {
         switch (operator.value) {
             //switch to check what operator the user chose and does the calculation and sets the output as the calculation result
             case "+":
-                let plusOperation = one + two
-                output.textContent = plusOperation
+
+                output.textContent = one + two
                 lastCalc.textContent = `${one} + ${two}`
                 break;
             case "-":
-                let minusOperation = one - two
-                output.textContent = minusOperation
+                output.textContent = one - two
                 lastCalc.textContent = `${one} - ${two}`
                 break;
             case "/":
-                let divideOperation = one / two
-                output.textContent = divideOperation
+                output.textContent = one / two
                 lastCalc.textContent = `${one} / ${two}`
                 break;
             case "*":
-                let timesOperation = one * two
-                output.textContent = timesOperation
+                output.textContent = one * two
                 lastCalc.textContent = `${one} * ${two}`
                 break;
         }
